@@ -5,8 +5,8 @@ Hamster
 Any links
 
 ## Research
-[Hamsters: Diet, habits & types](https://www.livescience.com/27169-hamsters.html)
-[Wild Hamsters](https://www.ifaw.org/ca-en/animals/wild-hamsters)
+[Hamsters: Diet, habits & types](https://www.livescience.com/27169-hamsters.html) <br>
+[Wild Hamsters](https://www.ifaw.org/ca-en/animals/wild-hamsters) <br>
 
 ## Coding
 [Learn CSS Animations in 9 Minutes](https://youtu.be/z2LQYsZhsFw) <br>
