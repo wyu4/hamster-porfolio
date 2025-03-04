@@ -1,2 +1,2 @@
-# hamster-webpage
+# hamster
 Hamster
