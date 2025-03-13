@@ -1,6 +1,6 @@
 /* Imports */
-@import url('./credited.css');
-@import url('./button.css');
+@import url('./glass-button.css');
+@import url('./gallery.css');
 
 .page1{
     font-family: 'Times New Roman', Times, serif;
