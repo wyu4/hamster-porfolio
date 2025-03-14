@@ -8,77 +8,50 @@
 </head>
 <body>
     <section id="page1">
-        <link rel="stylesheet" href="./css/style.css">
+        <style>
+            #page1{
+                font-family: 'Times New Roman', Times, serif;
+                justify-items: center;
+                display: grid;
+                grid-template-areas: 
+                    "top"
+                    "introduction"
+                    "bottom";
+                grid-template-columns: 1fr;
+            }
 
-        <section id="gallery">
-            <span class="button-wrap">
+            /* Credited */
+            img {
+                border-radius: 1vh;
+            }
+
+            .credited p{
+                font-style: italic;
+                font-weight: lighter;
+            }
+        </style>
+
+        <section id="top">
+            <h1>Hamsters</h1>
+        </section>
+
+        <section id="introduction">
+            <!-- <span class="button-wrap">
                 <button class="scroll-button" id="last-button">
                   <span><</span>
                 </button>
                 <div class="button-shadow"></div>
-            </span>
-
-            <div id="wrapper">
-                <div id="images">
-                    <div class="gallery-image">
-                        <img width=50% src="./images/syrian-hamster-eating-almond.jpg" alt="Picture of a Syrian Hamster eating an almond.">
-                        <!-- <p>Image by <a href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Derek Sewell</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Pixabay</a></p> -->
-                    </div>
-
-                    <div class="gallery-image">
-                        <img width=50% src="./images/syrian-hamster-eating-almond.jpg" alt="Picture of a Syrian Hamster eating an almond.">
-                        <!-- <p>Image by <a href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Derek Sewell</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Pixabay</a></p> -->
-                    </div>
-
-                    <div class="gallery-image">
-                        <img width=50% src="./images/syrian-hamster-eating-almond.jpg" alt="Picture of a Syrian Hamster eating an almond.">
-                        <!-- <p>Image by <a href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Derek Sewell</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Pixabay</a></p> -->
-                    </div>
-
-                    <div class="gallery-image">
-                        <img width=50% src="./images/syrian-hamster-eating-almond.jpg" alt="Picture of a Syrian Hamster eating an almond.">
-                        <!-- <p>Image by <a href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Derek Sewell</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Pixabay</a></p> -->
-                    </div>
-
-                    <div class="gallery-image">
-                        <img width=50% src="./images/syrian-hamster-eating-almond.jpg" alt="Picture of a Syrian Hamster eating an almond.">
-                        <!-- <p>Image by <a href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Derek Sewell</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Pixabay</a></p> -->
-                    </div>
-
-                    <div class="gallery-image">
-                        <img width=50% src="./images/syrian-hamster-eating-almond.jpg" alt="Picture of a Syrian Hamster eating an almond.">
-                        <!-- <p>Image by <a href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Derek Sewell</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Pixabay</a></p> -->
-                    </div>
-
-                    <div class="gallery-image">
-                        <img width=50% src="./images/syrian-hamster-eating-almond.jpg" alt="Picture of a Syrian Hamster eating an almond.">
-                        <!-- <p>Image by <a href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Derek Sewell</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Pixabay</a></p> -->
-                    </div>
-
-                    <div class="gallery-image">
-                        <img width=50% src="./images/syrian-hamster-eating-almond.jpg" alt="Picture of a Syrian Hamster eating an almond.">
-                        <!-- <p>Image by <a href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Derek Sewell</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Pixabay</a></p> -->
-                    </div>
-
-                    <div class="gallery-image">
-                        <img width=50% src="./images/syrian-hamster-eating-almond.jpg" alt="Picture of a Syrian Hamster eating an almond.">
-                        <!-- <p>Image by <a href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Derek Sewell</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Pixabay</a></p> -->
-                    </div>
-                </div>
+            </span> -->
+            <div>
+                <h1>Introduction</h1>
+                <p>
+                    The hamster is an <b>amazing</b> pet.
+                </p>
             </div>
-
-            <span class="button-wrap">
-                <button class="scroll-button" id="next-button">
-                  <span>></span>
-                </button>
-                <div class="button-shadow"></div>
-            </span>
-        </section>
-    
-        <hr>
-    
-        <section id="content">
-            
+            <div class="credited" id="thumbnail">
+                <img width=50vw src="./images/syrian-hamster-eating-almond.jpg" alt="Picture of a Syrian Hamster eating an almond.">
+                <p>Image by <a href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Derek Sewell</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Pixabay</a></p>
+            </div>
         </section>
     </section>
 </body>
