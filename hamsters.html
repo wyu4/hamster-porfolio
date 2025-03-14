@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamsters - Minipedia</title>
-    
+
 </head>
+
 <body>
     <section id="page1">
         <style>
@@ -13,12 +15,27 @@
                 font-family: 'Times New Roman', Times, serif;
                 justify-items: center;
                 display: grid;
-                grid-template-areas: 
+                grid-template-areas:
                     "top"
                     "introduction"
                     "bottom";
                 grid-template-columns: 1fr;
+                margin: 0;
+                padding: 0;
+            }
+
+            /* Heading/Paragraph sizes */
+            #page1 h1 {
+                font-size: 3em;
                 
+            }
+
+            #page1 h2 {
+                font-size: 2em;
+            }
+
+            #page1 p {
+                font-size: 1.75em;
             }
 
             /* Images */
@@ -30,6 +47,24 @@
                 font-style: italic;
                 font-weight: lighter;
             }
+
+            /* Introduction */
+            #page1 #introduction {
+                justify-items: center;
+                display: grid;
+                grid-template-areas:
+                    "content thumbnail";
+                grid-template-columns: 1fr 1fr;
+                
+            }
+
+            #page1 #introduction div{
+                align-items: center;
+            }
+
+            #page1 #introduction #content{
+                text-align: center;
+            }
         </style>
 
         <section id="top">
@@ -37,17 +72,28 @@
         </section>
 
         <section id="introduction">
-            <div>
-                <h1>Introduction</h1>
+            <div id="content">
+                <h2>Introduction</h2>
                 <p>
-                    The hamster is an <b>amazing</b> pet.
+                    Imagine coming home to a tiny, fluffy ball of pure joy zooming around its cage like a tiny NASCAR
+                    champion! <b>Hamsters are the perfect low-maintenance pets that fit right into your life, no
+                    matter how busy you are.</b> They're ridiculously adorable, with those chubby cheeks and twitchy little
+                    noses, and their playful antics will keep you endlessly entertained! Whether they're stuffing
+                    their cheeks with snacks or running on their little wheel like they're training for the Olympics,
+                    hamsters are guaranteed to steal your heart.
                 </p>
             </div>
             <div class="credited" id="thumbnail">
-                <img width=50vw src="./images/syrian-hamster-eating-almond.jpg" alt="Picture of a Syrian Hamster eating an almond.">
-                <p>Image by <a href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Derek Sewell</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235" target="_blank">Pixabay</a></p>
+                <img width="75%" src="./images/syrian-hamster-eating-almond.jpg"
+                    alt="Picture of a Syrian Hamster eating an almond.">
+                <p>Image by <a
+                        href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235"
+                        target="_blank">Derek Sewell</a> from <a
+                        href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235"
+                        target="_blank">Pixabay</a></p>
             </div>
         </section>
     </section>
 </body>
+
 </html
