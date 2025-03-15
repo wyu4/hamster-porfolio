@@ -12,14 +12,13 @@
     <section id="page1">
         <style>
             #page1 {
+                --panel-radius: 1vh;
+                --panel-gap: 3vh;
+
                 font-family: 'Times New Roman', Times, serif;
+                display: flex;
+                flex-direction: column;
                 justify-items: center;
-                display: grid;
-                grid-template-areas:
-                    "top"
-                    "introduction"
-                    "bottom";
-                grid-template-columns: 1fr;
                 margin: 0;
                 padding: 0;
             }
@@ -39,31 +38,64 @@
 
             /* Images */
             #page1 img {
-                border-radius: 1vh;
+                width: 100%;
+                height: auto;
+                border-radius: var(--panel-radius);
+                display: block;
             }
 
             #page1 .credited p {
                 font-style: italic;
                 font-weight: lighter;
                 font-size: 0.8em;
+                text-align: center;
+            }
+
+            #page1 .credited a img {
+                transition: transform 0.25s ease-in-out;
+            }
+
+            #page1 .credited a img:hover {
+                transform: scale(1.05);
+            }
+
+            /* Top */
+            #page1 #top {
+                grid-area: top;
             }
 
             /* Introduction */
             #page1 #introduction {
-                justify-items: center;
+                background-color: rgb(255, 248, 240);
+                border-radius: var(--panel-radius);
                 display: grid;
-                grid-template-areas:
-                    "content thumbnail";
-                grid-template-columns: 1fr 1fr;
-
+                grid-template-areas: 'bubble text';
+                grid-template-columns: 1fr 4fr;
             }
 
-            #page1 #introduction div{
-                align-items: center;
+            #page1 #introduction #thumbnail {
+                grid-area: bubble;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                margin-top: var(--panel-gap);
+                margin-bottom: var(--panel-gap);
+                margin-left: var(--panel-gap);
+                margin-right: 0px;
+                transform: scale(1.1);
             }
 
-            #page1 #introduction #content{
-                text-align: center;
+            #page1 #introduction #content {
+                grid-area: text;
+                text-align: left;
+                padding: var(--panel-gap);
+                margin-top: var(--panel-gap);
+                margin-bottom: var(--panel-gap);
+                margin-left: 0px;
+                margin-right: var(--panel-gap);
+                background-color: rgb(255, 255, 255);
+                border-radius: var(--panel-radius);
             }
         </style>
 
@@ -71,28 +103,25 @@
             <h1>Hamsters</h1>
         </section>
 
-        <section id="introduction">
+        <section id="introduction" class="split">
+            <div class="credited" id="thumbnail">
+                <a href="https://pixabay.com/photos/hamster-syrian-hamster-5490235/" target="_blank"
+                    title="Image by Derek Sewell"><img src="./images/syrian-hamster-eating-almond.jpg"
+                        alt="Picture of a Syrian Hamster eating an almond."></a>
+            </div>
             <div id="content">
-                <h2>Introduction</h2>
                 <p>
-                    Imagine coming home to a tiny, fluffy ball of pure joy zooming around its cage like a tiny NASCAR
-                    champion! <b>Hamsters are the perfect low-maintenance pets that fit right into your life, no
-                    matter how busy you are.</b> They're ridiculously adorable, with those chubby cheeks and twitchy little
-                    noses, and their playful antics will keep you endlessly entertained! Whether they're stuffing
-                    their cheeks with snacks or running on their little wheel like they're training for the Olympics,
-                    hamsters are guaranteed to steal your heart.
+                    <b>Hamsters are the perfect low-maintenance pets that fit right into your life, no matter how busy
+                        you are.</b> They're ridiculously adorable, with those chubby cheeks and twitchy little noses,
+                    and their playful antics will keep you endlessly entertained! Whether they're stuffing their cheeks
+                    with snacks or running on their little wheel like they're training for the Olympics, hamsters are
+                    guaranteed to steal your heart.
                 </p>
             </div>
-            <div class="credited" id="thumbnail">
-                <img width="75%" src="./images/syrian-hamster-eating-almond.jpg"
-                    alt="Picture of a Syrian Hamster eating an almond.">
-                <p>Image by <a
-                        href="https://pixabay.com/users/l0nd0ner-776135/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235"
-                        target="_blank">Derek Sewell</a> from <a
-                        href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5490235"
-                        target="_blank">Pixabay</a></p>
-            </div>
         </section>
+
+        <h2>Imagine coming home to a tiny, fluffy ball of pure joy zooming around its enclosure like a tiny NASCAR
+            champion! </h2>
     </section>
 </body>
 
