@@ -48,6 +48,216 @@
 
 <!-- Page 1: Hamsters -->
 <section id="page1">
+    <style>
+        #page1 {
+            --panel-radius: 1vh;
+            --panel-gap: 3vh;
+
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            margin: 0;
+            padding: 0;
+            gap: var(--panel-gap);
+        }
+
+        /* Heading/Paragraphs */
+        #page1 h1 {
+            font-size: 3em;
+        }
+
+        #page1 h2 {
+            font-size: 2em;
+        }
+
+        #page1 p {
+            font-size: 1.75em;
+        }
+
+        /* Images */
+        #page1 img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--panel-radius);
+            display: block;
+        }
+
+        #page1 .credited p {
+            font-style: italic;
+            font-weight: lighter;
+            font-size: 0.8em;
+            text-align: center;
+        }
+
+        #page1 .credited a img {
+            transition: transform 0.25s ease-in-out;
+        }
+
+        #page1 .credited a img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Top */
+        #page1 #top {
+            grid-area: top;
+            text-align: center;
+        }
+
+        /* Bubble Panel */
+        #page1 .bubble-panel {
+            display: grid;
+            border-radius: var(--panel-radius);
+            grid-template-areas: 'bubble text';
+            grid-template-columns: 1fr 4fr;
+            background-color: rgb(0, 0, 0, 0);
+        }
+
+        #page1 .bubble-panel.right {
+            grid-template-areas: 'text bubble';
+            grid-template-columns: 4fr 1fr;
+        }
+
+        #page1 .bubble-panel.wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #page1 .bubble-panel .bubble {
+            border-radius: var(--panel-radius);
+            grid-area: bubble;
+            display: flex;
+            flex-direction: column;
+            transform: scale(1.1);
+            justify-content: center;
+            align-items: flex-end;
+            margin-top: var(--panel-gap);
+            margin-bottom: var(--panel-gap);
+            margin-left: var(--panel-gap);
+            margin-right: 0px
+        }
+
+        #page1 .bubble-panel.right .bubble {
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: var(--panel-gap);
+            margin-bottom: var(--panel-gap);
+            margin-left: 0px;
+            margin-right: var(--panel-gap);
+        }
+
+        #page1 .bubble-panel .content {
+            grid-area: text;
+            background-color: rgb(255, 255, 255);
+            border-radius: var(--panel-radius);
+            text-align: left;
+            padding: var(--panel-gap);
+            margin-top: var(--panel-gap);
+            margin-bottom: var(--panel-gap);
+            margin-left: 0px;
+            margin-right: var(--panel-gap);
+        }
+
+        #page1 .bubble-panel.right .content {
+            padding: var(--panel-gap);
+            margin-top: var(--panel-gap);
+            margin-bottom: var(--panel-gap);
+            margin-left: var(--panel-gap);
+            margin-right: 0px;
+        }
+
+        /* Bubble label */
+        #page1 .bubble-label {
+            border-radius: var(--panel-radius);
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            margin-top: var(--panel-gap);
+            margin-bottom: var(--panel-gap);
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: auto;
+            padding-bottom: auto;
+            padding-left: var(--panel-gap);
+            padding-right: var(--panel-gap);
+        }
+
+        #page1 .bubble-label p {
+            font-weight: lighter;
+            font-size: 1.5em;
+        }
+
+        /* Section colors */
+        #page1 #introduction {
+            background-color: rgb(255, 248, 240);
+        }
+
+        #page1 #species .wrapper {
+            background-color: rgb(251, 231, 208);
+        }
+    </style>
+
+    <section id="top">
+        <h1>Hamsters</h1>
+    </section>
+
+    <section class="bubble-panel" id="introduction">
+        <div class="credited bubble" id="thumbnail">
+            <a href="https://pixabay.com/photos/hamster-syrian-hamster-5490235/" target="_blank"
+                title="Image by Derek Sewell"><img src="./images/syrian-hamster-eating-almond.jpg"
+                    alt="Picture of a Syrian Hamster eating an almond."></a>
+        </div>
+        <div class="content" id="content">
+            <h2>Imagine coming home to a tiny, fluffy ball of pure joy zooming around its enclosure like a tiny
+                NASCAR champion!</h2>
+            <p>
+                <b>Hamsters are the perfect low-maintenance pets that fit right into your life, no matter how busy
+                    you are.</b> They're ridiculously adorable, with those chubby cheeks and twitchy little noses,
+                and their playful antics will keep you endlessly entertained! Whether they're stuffing their cheeks
+                with snacks or running on their little wheel like they're training for the <i>Olympics</i>, hamsters
+                are
+                guaranteed to steal your heart.
+            </p>
+        </div>
+    </section>
+
+    <section id="species">
+        <div class="bubble-panel wrapper">
+            <div class="bubble-label">
+                <h2>Species</h2>
+                <p>Here are different kinds of hamsters!</p>
+            </div>
+            <div class="bubble-panel right">
+                <div class="content" id="content">
+                    <h2>Dwarf Roborovski</h2>
+                    <p>
+                        The tiniest night owl you've ever seen, the dwarf roborovski hamster (Robo for short) is a
+                        curious nocturnal hamster who maxes out at a whopping two inches long and weighs up to one
+                        ounce. Robos are known to be quite low-maintenance and quiet companions. While they don't
+                        like a lot of handling by their humans, they can get along well with other Robos, especially
+                        when raised together at a young age.
+                    </p>
+                </div>
+                <div class="credited bubble" id="thumbnail">
+                    <a href="https://pixabay.com/photos/hamster-rodent-dwarf-hamster-1772742/" target="_blank"
+                        title="Image by Christine Trewer"><img src="./images/dwarf-roborovski-eating-snack.jpg"
+                            alt="Picture of a Dwarf Roborovski eating a snack."></a>
+                </div>
+            </div>
+            <div class="bubble-panel right">
+                <div class="content" id="content">
+                    <h2>Syrian / Golden</h2>
+                    <p>
+                        The Syrian hamster (also known as the golden hamster) is one of the most popular and largest pet hamster breeds. Syrian hamsters weigh almost five times as much as other pet hamster species. Their larger size (up to five ounces) makes them easier to handle, making them a good choice for beginners. Note that unlike other hamster breeds, Syrian hamsters are best kept as the only pet (and only hamster) in a household due to their solitary and territorial nature.
+                    </p>
+                </div>
+                <div class="credited bubble" id="thumbnail">
+                    <a href="https://pixabay.com/photos/cute-small-portrait-golden-hamster-3161014/" target="_blank"
+                        title="Image by mordilla-net"><img src="./images/syrian-hamster-with-brocoli.jpg"
+                            alt="Picture of a Syrian hamster with a brocoli."></a>
+                </div>
+            </div>
+        </div>
+    </section>
 </section>
 
 </body>
