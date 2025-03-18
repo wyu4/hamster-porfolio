@@ -1,163 +1,57 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamsters - Minipedia</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+        }
 
+        h1 {
+            color: black;
+            margin-top: 20px;
+        }
+
+
+        #navbar {
+            background-color: black;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
+
+    <div id="navbar">
+        <a href="#home">Home</a>
+        <a href="#page1">Page 1</a>
+        <a href="#page2">Page 2</a>
+        <a href="#page3">Page 3</a>
+        <a href="#page4">Page 4</a>
+        <a href="#page5">Page 5</a>
+        <a href="#page6">Page 6</a>
+        <a href="#page7">Page 7</a>
+    </div>
+
+    <h1>Minipedia</h1>
+
+    <!-- Page 1: Hamsters -->
     <section id="page1">
-        <style>
-            #page1 {
-                --panel-radius: 1vh;
-                --panel-gap: 3vh;
-
-                font-family: 'Times New Roman', Times, serif;
-                display: flex;
-                flex-direction: column;
-                justify-items: center;
-                margin: 0;
-                padding: 0;
-                gap: var(--panel-gap);
-            }
-
-            /* Heading/Paragraphs */
-            #page1 h1 {
-                font-size: 3em;
-            }
-
-            #page1 h2 {
-                font-size: 2em;
-            }
-
-            #page1 p {
-                font-size: 1.75em;
-            }
-
-            /* Images */
-            #page1 img {
-                width: 100%;
-                height: auto;
-                border-radius: var(--panel-radius);
-                display: block;
-            }
-
-            #page1 .credited p {
-                font-style: italic;
-                font-weight: lighter;
-                font-size: 0.8em;
-                text-align: center;
-            }
-
-            #page1 .credited a img {
-                transition: transform 0.25s ease-in-out;
-            }
-
-            #page1 .credited a img:hover {
-                transform: scale(1.05);
-            }
-
-            /* Top */
-            #page1 #top {
-                grid-area: top;
-                text-align: center;
-            }
-
-            /* Bubble Panel */
-            #page1 .bubble-panel {
-                display: grid;
-                border-radius: var(--panel-radius);
-                grid-template-areas: 'bubble text';
-                grid-template-columns: 1fr 4fr;
-                background-color: rgb(0, 0, 0, 0);
-            }
-
-            #page1 .bubble-panel.right {
-                grid-template-areas: 'text bubble';
-                grid-template-columns: 4fr 1fr;
-            }
-
-            #page1 .bubble-panel.wrapper {
-                display: flex;
-                flex-direction: column;
-            }
-
-            #page1 .bubble-panel .bubble {
-                border-radius: var(--panel-radius);
-                grid-area: bubble;
-                display: flex;
-                flex-direction: column;
-                transform: scale(1.1);
-                justify-content: center;
-                align-items: flex-end;
-                margin-top: var(--panel-gap);
-                margin-bottom: var(--panel-gap);
-                margin-left: var(--panel-gap);
-                margin-right: 0px
-            }
-
-            #page1 .bubble-panel.right .bubble {
-                justify-content: center;
-                align-items: flex-start;
-                margin-top: var(--panel-gap);
-                margin-bottom: var(--panel-gap);
-                margin-left: 0px;
-                margin-right: var(--panel-gap);
-            }
-
-            #page1 .bubble-panel .content {
-                grid-area: text;
-                background-color: rgb(255, 255, 255);
-                border-radius: var(--panel-radius);
-                text-align: left;
-                padding: var(--panel-gap);
-                margin-top: var(--panel-gap);
-                margin-bottom: var(--panel-gap);
-                margin-left: 0px;
-                margin-right: var(--panel-gap);
-            }
-
-            #page1 .bubble-panel.right .content {
-                padding: var(--panel-gap);
-                margin-top: var(--panel-gap);
-                margin-bottom: var(--panel-gap);
-                margin-left: var(--panel-gap);
-                margin-right: 0px;
-            }
-
-            /* Bubble label */
-            #page1 .bubble-label {
-                border-radius: var(--panel-radius);
-                background-color: rgb(255, 255, 255);
-                text-align: center;
-                margin-top: var(--panel-gap);
-                margin-bottom: var(--panel-gap);
-                margin-left: auto;
-                margin-right: auto;
-                padding-top: auto;
-                padding-bottom: auto;
-                padding-left: var(--panel-gap);
-                padding-right: var(--panel-gap);
-            }
-
-            #page1 .bubble-label p {
-                font-weight: lighter;
-                font-size: 1.5em;
-            }
-
-            /* Section colors */
-            #page1 #introduction {
-                background-color: rgb(255, 248, 240);
-            }
-
-            #page1 #species .wrapper {
-                background-color: rgb(251, 231, 208);
-            }
-        </style>
-
         <section id="top">
             <h1>Hamsters</h1>
         </section>
@@ -182,12 +76,12 @@
         </section>
 
         <section id="species">
-            <div class="bubble-panel wrapper">
+            <div class="bubble-panel wrapper scroller">
                 <div class="bubble-label">
                     <h2>Species</h2>
                     <p>Here are different kinds of hamsters!</p>
                 </div>
-                <div class="bubble-panel right">
+                <div class="bubble-panel right scroll-element">
                     <div class="content" id="content">
                         <h2>Dwarf Roborovski</h2>
                         <p>
@@ -202,7 +96,7 @@
                                 alt="Picture of a Dwarf Roborovski eating a snack."></a>
                     </div>
                 </div>
-                <div class="bubble-panel right">
+                <div class="bubble-panel right scroll-element">
                     <div class="content" id="content">
                         <h2>Syrian / Golden</h2>
                         <p>
@@ -219,7 +113,7 @@
                                 alt="Picture of a Syrian hamster with a brocoli."></a>
                     </div>
                 </div>
-                <div class="bubble-panel right">
+                <div class="bubble-panel right scroll-element">
                     <div class="content" id="content">
                         <h2>Winter White Dwarf</h2>
                         <p>
@@ -237,7 +131,7 @@
                                 alt="Winter White Dwarf hamster"></a>
                     </div>
                 </div>
-                <div class="bubble-panel right">
+                <div class="bubble-panel right scroll-element">
                     <div class="content" id="content">
                         <h2>Chinese</h2>
                         <p>
@@ -258,4 +152,4 @@
     </section>
 </body>
 
-</html
+</html>
