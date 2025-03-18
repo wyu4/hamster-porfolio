@@ -1,5 +1,6 @@
 @import url(./bubble-panel.css);
 @import url(./images.css);
+@import url(./glass-button.css);
 
 #page1 {
     --panel-radius: 1vh;
